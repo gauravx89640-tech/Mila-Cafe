@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const fraunces = Fraunces({ 
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-cormorant"
-});
+  variable: '--font-fraunces',
+  display: 'swap',
+})
 
-const inter = Inter({ 
+const plusJakarta = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
-  weight: ["300", "400"],
-  variable: "--font-inter"
-});
+  variable: '--font-plus-jakarta',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Mila Café | Specialty Coffee in Brooklyn',
-  description: 'A neighbourhood café in Brooklyn serving specialty coffee, seasonal plates and good conversation. Slow down. Sip something good.',
+  title: 'Mila Cafe | Where Every Morning Feels Like a Treat',
+  description: 'Your neighborhood spot for all-day brunch, craft espresso, and feel-good food. From loaded bowls and fresh paninis to hand-crafted lattes and vegan-friendly options.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -44,10 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${cormorant.variable} ${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={`${fraunces.variable} ${plusJakarta.variable} bg-background`}>
+      <body className="font-sans antialiased">
         {children}
-        <Analytics />
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
