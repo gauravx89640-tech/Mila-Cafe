@@ -4,79 +4,51 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --card: #f9f7f4;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --primary: #2c4a3e;
-  --primary-foreground: #ffffff;
-  --secondary: #c9a96e;
-  --secondary-foreground: #1a1a1a;
-  --muted: #f9f7f4;
-  --muted-foreground: #888888;
-  --accent: #c9a96e;
-  --accent-foreground: #1a1a1a;
+  /* Mila Cafe Color Palette */
+  --terracotta: #B85C38;
+  --cream: #FAF4EC;
+  --forest: #2D4A3E;
+  --charcoal: #1A1A1A;
+  --warm-beige: #F5EDE3;
+  
+  --background: #FAF4EC;
+  --foreground: #1A1A1A;
+  --card: #F5EDE3;
+  --card-foreground: #1A1A1A;
+  --popover: #FAF4EC;
+  --popover-foreground: #1A1A1A;
+  --primary: #B85C38;
+  --primary-foreground: #FAF4EC;
+  --secondary: #2D4A3E;
+  --secondary-foreground: #FAF4EC;
+  --muted: #F5EDE3;
+  --muted-foreground: #5A5A5A;
+  --accent: #2D4A3E;
+  --accent-foreground: #FAF4EC;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #e8e2d9;
-  --input: #e8e2d9;
-  --ring: #2c4a3e;
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --border: #E5DDD3;
+  --input: #E5DDD3;
+  --ring: #B85C38;
+  --chart-1: #B85C38;
+  --chart-2: #2D4A3E;
+  --chart-3: #D4A574;
+  --chart-4: #8B7355;
+  --chart-5: #A67B5B;
+  --radius: 0.625rem;
+  --sidebar: #FAF4EC;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #B85C38;
+  --sidebar-primary-foreground: #FAF4EC;
+  --sidebar-accent: #F5EDE3;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5DDD3;
+  --sidebar-ring: #B85C38;
 }
 
 @theme inline {
-  --font-sans: var(--font-inter), 'Inter', sans-serif;
-  --font-serif: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), 'Fraunces', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -114,6 +86,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom colors for Mila Cafe */
+  --color-terracotta: #B85C38;
+  --color-cream: #FAF4EC;
+  --color-forest: #2D4A3E;
+  --color-charcoal: #1A1A1A;
+  --color-warm-beige: #F5EDE3;
 }
 
 @layer base {
@@ -123,4 +102,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
